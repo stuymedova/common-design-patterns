@@ -2,7 +2,7 @@
 
 ### Behavioral patterns
 
-- Observer (p.293)
+- Observer (p.293)*
 
 ### Creational patterns
 
@@ -18,6 +18,8 @@ Simplest and most common patterns
 - Strategy (p.315)
 - Template Method (p.325)
 -->
+
+\* Pages here are references to the book "Design Patterns: Elements of Reusable Object-Oriented Software" by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides
 
 ---
 
