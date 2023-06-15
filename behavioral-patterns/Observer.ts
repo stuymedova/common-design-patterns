@@ -17,10 +17,12 @@
 //   notification to its Observers. In addition, each
 //   Observer may query the Subject to synchronize its state
 //   with the subject's state.
+//
+// Below is one possible implementation of the pattern
+// Observer.
 
 
 interface Subject {
-	observers: Record<string, Observer>;
 	attach: (observer: Observer) => void;
 	detach: (observer: Observer) => void;
 	notify: () => void;
@@ -31,17 +33,37 @@ interface Observer {
 }
 
 class ConcreteSubject implements Subject {
-	readonly observers: Record<string, Observer>;
-	public state;
+	private observers: Array<Observer> = [];
+	private _state: any;
 
-	attach() {
+	set state(newState: any) {
+		this._state = newState;
+		this.notify();
+	}
 
+	get state() {
+		return this._state;
+	}
+
+	attach(observer: Observer) {
+		if (this.observers.includes(observer)) {
+			return false;
+		}
+		this.observers.push(observer);
+		return true;
 	}
 	
-	detach() {}
+	detach(observer: Observer) {
+		const indexOfObserver = this.observers.indexOf(observer);
+		if (indexOfObserver === -1) {
+			return false;
+		}
+		this.observers.splice(indexOfObserver, 1);
+		return true;
+	}
 
 	notify() {
-		for (const observer of Object.values(this.observers)) {
+		for (const observer of this.observers) {
 			observer.update(this);
 		}
 		return this;
@@ -49,11 +71,19 @@ class ConcreteSubject implements Subject {
 }
 
 class ConcreteObserver implements Observer {
-	public state;
+	private _state: any;
+
+	set state(newState: any) {
+		this._state = newState;
+	}
+
+	get state() {
+		return this._state;
+	}
 
 	update(subject?: Subject) {
 		if (subject instanceof ConcreteSubject) {
-			// do something
+			this.state = subject.state;
 		}
 	}
 }
