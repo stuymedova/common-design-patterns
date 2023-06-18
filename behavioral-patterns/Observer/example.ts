@@ -1,9 +1,10 @@
-// Example
-//
-// A ClockTimer (Subject) responsible for notifying the
-// two clocks (Observers) whenever the time is changed
-// so they can redisplay themselves appropriately.
-
+/**
+ * Observer Example
+ * 
+ * A ClockTimer (Subject) responsible for notifying the
+ * two clocks (Observers) whenever the time is changed
+ * so they can redisplay themselves appropriately.
+ */
 
 import { Subject, Observer } from './Observer.ts';
 
@@ -12,11 +13,13 @@ interface ClockState {
 	minute?: number,
 };
 
-// ClockTimer is a concrete subject for storing and
-// maintaining the time of day. It notifies its observers
-// every second. ClockTimer provides the interface for
-// retrieving individual time units such as the hour,
-// minute, and second.
+/**
+ * ClockTimer is a concrete subject for storing and
+ * maintaining the time of day. It notifies its observers
+ * every second. ClockTimer provides the interface for
+ * retrieving individual time units such as the hour,
+ * minute, and second.
+ */
 class ClockTimer implements Subject {
 	private _observers: Array<Observer> = [];
 	private _date = new Date();
@@ -67,8 +70,10 @@ class ClockTimer implements Subject {
 	}
 }
 
-// DigitalClock is a concrete object for displaying time
-// in the digital format.
+/**
+ * DigitalClock is a concrete object for displaying time
+ * in the digital format.
+ */
 class DigitalClock implements Observer {
 	private _state: ClockState = {};
 
@@ -101,8 +106,10 @@ class DigitalClock implements Observer {
 	}
 }
 
-// AnalogClock is a concrete object for displaying time
-// in the analog format.
+/**
+ * AnalogClock is a concrete object for displaying time
+ * in the analog format.
+ */
 class AnalogClock implements Observer {
 	private _state: ClockState = {};
 

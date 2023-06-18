@@ -2,7 +2,7 @@
 
 ### Behavioral patterns
 
-- Observer (p.293)*
+- [Observer (p.293)*](./behavioral-patterns/Observer/Observer.ts)
 
 ### Creational patterns
 
