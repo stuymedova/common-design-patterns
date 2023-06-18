@@ -18,52 +18,52 @@
 //   Observer may query the Subject to synchronize its state
 //   with the subject's state.
 //
-// Below is one possible implementation of the pattern
-// Observer.
+// Below is one possible template implementation of the
+// pattern Observer.
 
 
-interface Subject {
+export interface Subject {
 	attach: (observer: Observer) => void;
 	detach: (observer: Observer) => void;
 	notify: () => void;
 }
 
-interface Observer {
+export interface Observer {
 	update: (subject?: Subject) => void;
 }
 
 class ConcreteSubject implements Subject {
-	private observers: Array<Observer> = [];
+	private _observers: Array<Observer> = [];
 	private _state: any;
 
-	set state(newState: any) {
+	public set state(newState: any) {
 		this._state = newState;
 		this.notify();
 	}
 
-	get state() {
+	public get state() {
 		return this._state;
 	}
 
-	attach(observer: Observer) {
-		if (this.observers.includes(observer)) {
+	public attach(observer: Observer) {
+		if (this._observers.includes(observer)) {
 			return false;
 		}
-		this.observers.push(observer);
+		this._observers.push(observer);
 		return true;
 	}
 	
-	detach(observer: Observer) {
-		const indexOfObserver = this.observers.indexOf(observer);
+	public detach(observer: Observer) {
+		const indexOfObserver = this._observers.indexOf(observer);
 		if (indexOfObserver === -1) {
 			return false;
 		}
-		this.observers.splice(indexOfObserver, 1);
+		this._observers.splice(indexOfObserver, 1);
 		return true;
 	}
 
-	notify() {
-		for (const observer of this.observers) {
+	public notify() {
+		for (const observer of this._observers) {
 			observer.update(this);
 		}
 		return this;
@@ -73,15 +73,15 @@ class ConcreteSubject implements Subject {
 class ConcreteObserver implements Observer {
 	private _state: any;
 
-	set state(newState: any) {
+	public set state(newState: any) {
 		this._state = newState;
 	}
 
-	get state() {
+	public get state() {
 		return this._state;
 	}
 
-	update(subject?: Subject) {
+	public update(subject?: Subject) {
 		if (subject instanceof ConcreteSubject) {
 			this.state = subject.state;
 		}
