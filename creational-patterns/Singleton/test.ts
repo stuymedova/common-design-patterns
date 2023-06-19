@@ -1,13 +1,13 @@
 import { Singleton } from './Singleton.ts';
 
 function test() {
-    const s1 = new Singleton();
-    const s2 = new Singleton();
+    const session = new Singleton();
+    const sessionCounterpart = new Singleton();
     
-    if (s1 === s2) {
-        console.log('Singleton works, both variables contain the same instance.');
+    if (session === sessionCounterpart) {
+        console.log('Singleton works, both variables hold a reference to the same instance');
     } else {
-        console.log('Singleton failed, variables contain different instances.');
+        console.log('Singleton failed, variables hold references to different instances');
     }
 }
 test();

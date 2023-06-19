@@ -6,7 +6,7 @@
 
 ### Creational patterns
 
-- [Singleton (p.127)](./behavioral-patterns/Singleton/Singleton.ts)
+- [Singleton (p.127)](./creational-patterns/Singleton/Singleton.ts)
 
 ### Structural patterns
 
