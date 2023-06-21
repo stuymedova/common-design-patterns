@@ -1,18 +1,18 @@
 interface WidgetFactory {
 	createScrollBar: () => ScrollBar;
-	createMenu: () => Menu;
+	createWindow: () => CustomWindow;
 }
 
 interface ScrollBar {}
-interface Menu {}
+interface CustomWindow {}
 
 class MotifWidgetFactory implements WidgetFactory {
 	createScrollBar() {
 		return new MotifScrollBar();
 	}
 
-	createMenu() {
-		return new MotifMenu();
+	createWindow() {
+		return new MotifWindow();
 	}
 }
 class PMWidgetFactory implements WidgetFactory {
@@ -20,13 +20,13 @@ class PMWidgetFactory implements WidgetFactory {
 		return new PMScrollBar();
 	}
 
-	createMenu() {
-		return new PMMenu();
+	createWindow() {
+		return new PMWindow();
 	}
 }
 
 class MotifScrollBar implements ScrollBar {}
 class PMScrollBar implements ScrollBar {}
 
-class MotifMenu implements Menu {}
-class PMMenu implements Menu {}
+class MotifWindow implements CustomWindow {}
+class PMWindow implements CustomWindow {}

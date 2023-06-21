@@ -2,14 +2,14 @@
 
 ### Creational patterns
 
-- [Abstract Factory (p.87)](./creational-patterns/AbstractFactory/AbstractFactory.ts)
+- [Abstract Factory (p.87)*](./creational-patterns/AbstractFactory/AbstractFactory.ts)
 - [Singleton (p.127)](./creational-patterns/Singleton/Singleton.ts)
 
 ### Structural patterns
 
 ### Behavioral patterns
 
-- [Observer (p.293)*](./behavioral-patterns/Observer/Observer.ts)
+- [Observer (p.293)](./behavioral-patterns/Observer/Observer.ts)
 
 <!--
 Simplest and most common patterns
