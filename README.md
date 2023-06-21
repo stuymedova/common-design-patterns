@@ -20,7 +20,7 @@ Simplest and most common patterns
 - Template Method (p.325)
 -->
 
-\* Pages here are references to the book "Design Patterns: Elements of Reusable Object-Oriented Software" by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides
+\* Pages here are references to the book "Design Patterns: Elements of Reusable Object-Oriented Software" by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides. Annotations and diagrams within the files are excerpts from the book.
 
 ---
 
