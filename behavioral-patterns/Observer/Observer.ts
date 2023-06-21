@@ -19,8 +19,8 @@
  *   Observer may query the Subject to synchronize its state
  *   with the subject's state.
  * 
- * Below is one possible template implementation of the
- * pattern Observer.
+ * Below the structure of one possible implementation of
+ * the pattern Observer.
  */
 
 export interface Subject {

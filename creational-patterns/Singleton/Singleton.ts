@@ -15,6 +15,9 @@
  * The Singleton class ensures that no other instance of
  * the object can be created and does so by intercepting
  * requests to create new objects.
+ * 
+ * Below the structure of one possible implementation of
+ * the pattern Singleton.
  */
 
 export class Singleton {
