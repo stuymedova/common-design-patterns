@@ -76,7 +76,6 @@ class ClockTimer implements Subject {
  */
 class DigitalClock implements Observer {
 	private _state: ClockState = {};
-
 	private _subject: ClockTimer | null = null;
 
 	constructor(subject: ClockTimer) {
@@ -112,7 +111,6 @@ class DigitalClock implements Observer {
  */
 class AnalogClock implements Observer {
 	private _state: ClockState = {};
-
 	private _subject: ClockTimer | null = null;
 
 	constructor(subject: ClockTimer) {

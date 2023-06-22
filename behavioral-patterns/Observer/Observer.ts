@@ -31,11 +31,14 @@
  *  ┌───────────────────┐ *          ┌──────────────────┐
  *  │  ConcreteSubject  │<───────────│ ConcreteObserver │
  *  ├───────────────────┤            ├──────────────────┤
- *  │ subjectState      │            │ update()         │
- *  ├───────────────────┤            └──────────────────┘
- *  │ getState()        │
- *  │ setState()        │
+ *  │ subjectState      │            │ observerState    │
+ *  ├───────────────────┤            ├──────────────────┤
+ *  │ getState()        │            │ update()         │
+ *  │ setState()        │            └──────────────────┘
  *  └───────────────────┘
+ * 
+ * The may be differences between the diagram and the code
+ * below.
  * 
  * Below the structure of one possible implementation of
  * the pattern Observer.
@@ -55,12 +58,12 @@ class ConcreteSubject implements Subject {
 	private _observers: Array<Observer> = [];
 	private _state: any;
 
-	public set state(newState: any) {
+	public setState(newState: any) {
 		this._state = newState;
 		this.notify();
 	}
 
-	public get state() {
+	public getState() {
 		return this._state;
 	}
 
@@ -90,19 +93,11 @@ class ConcreteSubject implements Subject {
 }
 
 class ConcreteObserver implements Observer {
-	private _state: any;
-
-	public set state(newState: any) {
-		this._state = newState;
-	}
-
-	public get state() {
-		return this._state;
-	}
+	public state: any;
 
 	public update(subject?: Subject) {
 		if (subject instanceof ConcreteSubject) {
-			this.state = subject.state;
+			this.state = subject.getState();
 		}
 	}
 }
