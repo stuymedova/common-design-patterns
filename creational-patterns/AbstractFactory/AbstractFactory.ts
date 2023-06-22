@@ -14,9 +14,6 @@ interface AbstractFactory {
 	createProductB: () => AbstractProductB;
 }
 
-interface AbstractProductA {}
-interface AbstractProductB {}
-
 class ConcreteFactory1 implements AbstractFactory {
 	createProductA() {
 		return new ProductA1();
@@ -35,6 +32,9 @@ class ConcreteFactory2 implements AbstractFactory {
 		return new ProductB2();
 	}
 }
+
+interface AbstractProductA {}
+interface AbstractProductB {}
 
 class ProductA1 implements AbstractProductA {}
 class ProductA2 implements AbstractProductA {}

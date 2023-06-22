@@ -20,7 +20,7 @@ Simplest and most common patterns
 - Template Method (p.325)
 -->
 
-\* Pages here are references to the book "Design Patterns: Elements of Reusable Object-Oriented Software" by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides. Annotations and diagrams within the files are excerpts from the book.
+\* Pages here are references to the book "Design Patterns: Elements of Reusable Object-Oriented Software" by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides. Annotations within the files are excerpts from the book. Diagrams, if present, are constructed with UML[[1](https://learn.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2015/modeling/uml-class-diagrams-reference)][[2](https://www.ida.liu.se/~chrke55/courses/SWE/intro-uml-designpatterns)].
 
 ---
 

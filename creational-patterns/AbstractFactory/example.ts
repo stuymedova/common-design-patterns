@@ -3,9 +3,6 @@ interface WidgetFactory {
 	createWindow: () => CustomWindow;
 }
 
-interface ScrollBar {}
-interface CustomWindow {}
-
 class MotifWidgetFactory implements WidgetFactory {
 	createScrollBar() {
 		return new MotifScrollBar();
@@ -25,8 +22,15 @@ class PMWidgetFactory implements WidgetFactory {
 	}
 }
 
+interface ScrollBar {}
+interface CustomWindow {}
+
 class MotifScrollBar implements ScrollBar {}
 class PMScrollBar implements ScrollBar {}
 
 class MotifWindow implements CustomWindow {}
 class PMWindow implements CustomWindow {}
+
+const app = new MotifWidgetFactory();
+app.createWindow();
+app.createScrollBar();

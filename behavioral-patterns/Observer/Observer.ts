@@ -19,6 +19,24 @@
  *   Observer may query the Subject to synchronize its state
  *   with the subject's state.
  * 
+ *  ┌───────────────────┐          * ┌──────────────────┐
+ *  │      Subject      │───────────>│     Observer     │
+ *  ├───────────────────┤            ├──────────────────┤
+ *  │ attach(Observer)  │            │ update()         │
+ *  │ detach(Observer)  │            └──────────────────┘
+ *  │ notify()          │                      △
+ *  └───────────────────┘                      │
+ *            △                                │
+ *            │                                │
+ *  ┌───────────────────┐ *          ┌──────────────────┐
+ *  │  ConcreteSubject  │<───────────│ ConcreteObserver │
+ *  ├───────────────────┤            ├──────────────────┤
+ *  │ subjectState      │            │ update()         │
+ *  ├───────────────────┤            └──────────────────┘
+ *  │ getState()        │
+ *  │ setState()        │
+ *  └───────────────────┘
+ * 
  * Below the structure of one possible implementation of
  * the pattern Observer.
  */
