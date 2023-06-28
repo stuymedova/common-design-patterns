@@ -31,6 +31,15 @@ class PMScrollBar implements ScrollBar {}
 class MotifWindow implements CustomWindow {}
 class PMWindow implements CustomWindow {}
 
-const app = new MotifWidgetFactory();
-app.createWindow();
-app.createScrollBar();
+
+const preferMotif = true;
+
+if (preferMotif) {
+	const motifApp = new MotifWidgetFactory();
+	motifApp.createWindow();
+	motifApp.createScrollBar();
+} else {
+	const pmApp = new PMWidgetFactory();
+	pmApp.createWindow();
+	pmApp.createScrollBar();
+}

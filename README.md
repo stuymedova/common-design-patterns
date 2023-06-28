@@ -7,6 +7,8 @@
 
 ### Structural patterns
 
+- [Decorator (p.175)](./structural-patterns/Decorator/Decorator.ts)
+
 ### Behavioral patterns
 
 - [Observer (p.293)](./behavioral-patterns/Observer/Observer.ts)
@@ -14,7 +16,6 @@
 <!--
 Simplest and most common patterns
 - Composite (p.163)
-- Decorator (p.175)
 - Factory Method (p.107)
 - Strategy (p.315)
 - Template Method (p.325)
