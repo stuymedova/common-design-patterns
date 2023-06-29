@@ -12,12 +12,12 @@
 ### Behavioral patterns
 
 - [Observer (p.293)](./behavioral-patterns/Observer/Observer.ts)
+- [Strategy (p.315)](./behavioral-patterns/Strategy/Strategy.ts)
 
 <!--
 Simplest and most common patterns
 - Composite (p.163)
 - Factory Method (p.107)
-- Strategy (p.315)
 - Template Method (p.325)
 -->
 
