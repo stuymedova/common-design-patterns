@@ -1,23 +1,9 @@
 /**
  * Observer
  *
- * Establishes a one-to-many relationship between objects
- * so that when one object changes state, all its
- * dependents are notified and updated automatically.
- * The interaction between those objects is called
- * publish-subscribe.
- *
- * Useful for communicating changes between logically
- * separated parts of an app such as between models and
- * views.
- *
- * - Participants: Subject, Observer.
- *   Subject is the entity Observers observe. Subject may
- *   have any number of dependent Observers. Whenever the
- *   Subject undergoes a change in state, it sends out the
- *   notification to its Observers. In addition, each
- *   Observer may query the Subject to synchronize its state
- *   with the subject's state.
+ * Defines a one-to-many dependency between objects so
+ * that when one object changes state, all its dependents
+ * are notified and updated automatically.
  *
  * Below the structure of one possible implementation of
  * the pattern Observer.

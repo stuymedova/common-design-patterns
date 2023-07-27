@@ -1,21 +1,10 @@
 /**
  * Decorator (Wrapper)
- * 
+ *
  * Attaches additional responsibilities to a given
  * object dynamically by enclosing (wrapping) said object
  * within itself.
  * 
- * The following object diagram shows how to compose a
- * TextView object with BorderDecorator and ScrollDecorator
- * objects to produce a bordered, scrollable text view:
- * 
- *  ╭──────────────────╮
- *  │ aBorderDecorator │         ╭──────────────────╮
- *  ├──────────────────┤         │ aScrollDecorator │         ╭──────────────────╮
- *  │ component      ●─┼────────>├──────────────────┤         │ aTextView        │
- *  ╰──────────────────╯         │ component      ●─┼────────>├──────────────────┤
- *                               ╰──────────────────╯         │                  │
- *                                                            ╰──────────────────╯
  * Below the structure of one possible implementation of
  * the pattern Decorator.
  */
@@ -80,7 +69,7 @@ class ConcreteDecoratorB extends Decorator {
 		super(component);
 		this.addedState = {};
 	}
-	
+
 	public operation() {
 		super.operation();
 		this.addedBehaviour();
