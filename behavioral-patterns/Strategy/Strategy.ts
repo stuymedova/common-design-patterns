@@ -46,3 +46,17 @@ class ConcreteStrategyC implements Strategy {
 		// Does something
 	}
 }
+
+
+const concreteStrategyA = new ConcreteStrategyA();
+const concreteStrategyB = new ConcreteStrategyB();
+const concreteStrategyC = new ConcreteStrategyC();
+
+const context = new Context(concreteStrategyA);
+context.contextInterface();
+
+context.setStrategy(concreteStrategyB);
+context.contextInterface();
+
+context.setStrategy(concreteStrategyC);
+context.contextInterface();

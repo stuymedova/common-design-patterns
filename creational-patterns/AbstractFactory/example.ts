@@ -33,13 +33,12 @@ class PMWindow implements CustomWindow {}
 
 
 const preferMotif = true;
+const app = (() => {
+	if (preferMotif) {
+		return new MotifWidgetFactory();
+	}
+	return new PMWidgetFactory();
+})();
 
-if (preferMotif) {
-	const motifApp = new MotifWidgetFactory();
-	motifApp.createWindow();
-	motifApp.createScrollBar();
-} else {
-	const pmApp = new PMWidgetFactory();
-	pmApp.createWindow();
-	pmApp.createScrollBar();
-}
+app.createWindow();
+app.createScrollBar();

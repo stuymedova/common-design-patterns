@@ -7,14 +7,14 @@ class TextView implements VisualComponent {
 }
 
 class ComponentDecorator implements VisualComponent {
-	protected _component: VisualComponent;
+	protected component: VisualComponent;
 
 	constructor(component: VisualComponent) {
-		this._component = component;
+		this.component = component;
 	}
 
 	public draw() {
-		return this._component.draw();
+		return this.component.draw();
 	}
 }
 
@@ -41,7 +41,7 @@ class BorderDecorator extends ComponentDecorator {
 		super(component);
 		this.borderWidth = 1;
 	}
-	
+
 	public draw() {
 		super.draw();
 		this.drawBorder();

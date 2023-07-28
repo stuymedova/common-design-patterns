@@ -1,6 +1,6 @@
 /**
  * Observer Example
- * 
+ *
  * A ClockTimer (Subject) responsible for notifying the
  * two clocks (Observers) whenever the time is changed
  * so they can redisplay themselves appropriately.
@@ -13,16 +13,9 @@ interface ClockState {
 	minute?: number,
 };
 
-/**
- * ClockTimer is a concrete subject for storing and
- * maintaining the time of day. It notifies its observers
- * every second. ClockTimer provides the interface for
- * retrieving individual time units such as the hour,
- * minute, and second.
- */
 class ClockTimer implements Subject {
-	private _observers: Array<Observer> = [];
-	private _date = new Date();
+	private observers: Array<Observer> = [];
+	private date = new Date();
 
 	constructor() {
 		this.tick();
@@ -30,62 +23,58 @@ class ClockTimer implements Subject {
 
 	private tick() {
 		setInterval(() => {
-			this._date = new Date();
+			this.date = new Date();
 			this.notify();
 			this.tick();
 		}, 1000);
 	}
 
 	public getHour() {
-		return this._date.getHours();
+		return this.date.getHours();
 	}
 	public getMinute() {
-		return this._date.getMinutes();
+		return this.date.getMinutes();
 	}
 	public getSecond() {
-		return this._date.getSeconds();
+		return this.date.getSeconds();
 	}
 
 	public attach(observer: Observer) {
-		if (this._observers.includes(observer)) {
+		if (this.observers.includes(observer)) {
 			return false;
 		}
-		this._observers.push(observer);
+		this.observers.push(observer);
 		return true;
 	}
 
 	public detach(observer: Observer) {
-		const indexOfObserver = this._observers.indexOf(observer);
+		const indexOfObserver = this.observers.indexOf(observer);
 		if (indexOfObserver === -1) {
 			return false;
 		}
-		this._observers.splice(indexOfObserver, 1);
+		this.observers.splice(indexOfObserver, 1);
 		return true;
 	}
 
 	public notify() {
-		for (const observer of this._observers) {
+		for (const observer of this.observers) {
 			observer.update(this);
 		}
 	}
 }
 
-/**
- * DigitalClock is a concrete object for displaying time
- * in the digital format.
- */
 class DigitalClock implements Observer {
-	private _state: ClockState = {};
-	private _subject: ClockTimer | null = null;
+	private state: ClockState = {};
+	private subject: ClockTimer | null = null;
 
 	constructor(subject: ClockTimer) {
-		this._subject = subject;
-		this._subject.attach(this);
+		this.subject = subject;
+		this.subject.attach(this);
 	}
 
 	public update() {
-		this._state.hour = this._subject?.getHour();
-		this._state.minute = this._subject?.getMinute();
+		this.state.hour = this.subject?.getHour();
+		this.state.minute = this.subject?.getMinute();
 
 		this.draw();
 	}
@@ -93,15 +82,15 @@ class DigitalClock implements Observer {
 	public draw() {
 		// Defines how to draw the digital clock.
 		// Below is a filler for testing.
-		console.log('Digital Clock', this._state.hour, this._state.minute);
+		console.log('Digital Clock', this.state.hour, this.state.minute);
 	}
 
 	public destruct() {
-		if (this._subject) {
-			this._subject.detach(this);
+		if (this.subject) {
+			this.subject.detach(this);
 		}
-		this._state = {};
-		this._subject = null;
+		this.state = {};
+		this.subject = null;
 	}
 }
 
@@ -110,17 +99,17 @@ class DigitalClock implements Observer {
  * in the analog format.
  */
 class AnalogClock implements Observer {
-	private _state: ClockState = {};
-	private _subject: ClockTimer | null = null;
+	private state: ClockState = {};
+	private subject: ClockTimer | null = null;
 
 	constructor(subject: ClockTimer) {
-		this._subject = subject;
-		this._subject.attach(this);
+		this.subject = subject;
+		this.subject.attach(this);
 	}
 
 	public update() {
-		this._state.hour = this._subject?.getHour();
-		this._state.minute = this._subject?.getMinute();
+		this.state.hour = this.subject?.getHour();
+		this.state.minute = this.subject?.getMinute();
 
 		this.draw();
 	}
@@ -128,15 +117,15 @@ class AnalogClock implements Observer {
 	public draw() {
 		// Defines how to draw the analog clock.
 		// Below is a filler for testing.
-		console.log('Analog Clock', this._state.hour, this._state.minute);
+		console.log('Analog Clock', this.state.hour, this.state.minute);
 	}
 
 	public destruct() {
-		if (this._subject) {
-			this._subject.detach(this);
+		if (this.subject) {
+			this.subject.detach(this);
 		}
-		this._state = {};
-		this._subject = null;
+		this.state = {};
+		this.subject = null;
 	}
 }
 

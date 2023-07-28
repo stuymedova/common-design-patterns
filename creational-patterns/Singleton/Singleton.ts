@@ -1,20 +1,22 @@
 /**
  * Singleton
- * 
+ *
  * Ensures a class has only one instance and provides a
  * global point of access to it.
- * 
+ *
  * Below the structure of one possible implementation of
  * the pattern Singleton.
  */
 
 export class Singleton {
-	private static _instance: Singleton;
+	private static instance: Singleton;
 
 	constructor() {
-		if (!Singleton._instance) {
-            Singleton._instance = this;
+		if (!Singleton.instance) {
+            Singleton.instance = this;
         }
-        return Singleton._instance;
+        return Singleton.instance;
 	}
 }
+
+const singleton = new Singleton();

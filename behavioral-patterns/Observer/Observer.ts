@@ -20,37 +20,37 @@ export interface Observer {
 }
 
 class ConcreteSubject implements Subject {
-	private _observers: Array<Observer> = [];
-	private _state: any;
+	private observers: Array<Observer> = [];
+	private state: any;
 
 	public setState(newState: any) {
-		this._state = newState;
+		this.state = newState;
 		this.notify();
 	}
 
 	public getState() {
-		return this._state;
+		return this.state;
 	}
 
 	public attach(observer: Observer) {
-		if (this._observers.includes(observer)) {
+		if (this.observers.includes(observer)) {
 			return false;
 		}
-		this._observers.push(observer);
+		this.observers.push(observer);
 		return true;
 	}
 
 	public detach(observer: Observer) {
-		const indexOfObserver = this._observers.indexOf(observer);
+		const indexOfObserver = this.observers.indexOf(observer);
 		if (indexOfObserver === -1) {
 			return false;
 		}
-		this._observers.splice(indexOfObserver, 1);
+		this.observers.splice(indexOfObserver, 1);
 		return true;
 	}
 
 	public notify() {
-		for (const observer of this._observers) {
+		for (const observer of this.observers) {
 			observer.update(this);
 		}
 		return this;
@@ -58,11 +58,28 @@ class ConcreteSubject implements Subject {
 }
 
 class ConcreteObserver implements Observer {
-	public state: any;
+	private state: Record<string, any> = {};
+	private subject: Subject = null;
+
+	constructor(subject: Subject) {
+		this.subject = subject;
+		this.subject.attach(this);
+	}
 
 	public update(subject?: Subject) {
 		if (subject instanceof ConcreteSubject) {
-			this.state = subject.getState();
+			this.state = (this.subject as ConcreteSubject).getState();
 		}
 	}
+
+	public destruct() {
+		if (this.subject) {
+			this.subject.detach(this);
+		}
+		this.state = {};
+		this.subject = null;
+	}
 }
+
+const concreteSubject = new ConcreteSubject();
+const concreteObserver = new ConcreteObserver(concreteSubject);

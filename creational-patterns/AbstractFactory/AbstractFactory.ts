@@ -1,10 +1,10 @@
 /**
  * Abstract Factory
- * 
+ *
  * Provides an interface for creating families of related
  * or dependent objects without specifying their concrete
  * classes.
- * 
+ *
  * Below the structure of one possible implementation of
  * the pattern Abstract Factory.
  */
@@ -41,3 +41,15 @@ class ProductA2 implements AbstractProductA {}
 
 class ProductB1 implements AbstractProductB {}
 class ProductB2 implements AbstractProductB {}
+
+
+const preferA = true;
+const concreteFactory = (() => {
+	if (preferA) {
+		return new ConcreteFactory1();
+	}
+	return new ConcreteFactory2();
+})();
+
+concreteFactory.createProductA();
+concreteFactory.createProductB();
