@@ -1,6 +1,6 @@
 # Common Design Patterns
 
-<!-- [5/23] -->
+<!-- [6/23] -->
 
 ### Creational patterns
 
@@ -17,9 +17,10 @@
 
 ### Behavioral patterns
 
-<!-- [2/11] -->
+<!-- [3/11] -->
 
 - [Observer (p.293)](./behavioral-patterns/Observer/Observer.ts)
+- [State (p.305)](./behavioral-patterns/State/State.ts)
 - [Strategy (p.315)](./behavioral-patterns/Strategy/Strategy.ts)
 
 <!--
@@ -33,7 +34,6 @@ Simplest and most common patterns
 <!--
 Interesting patterns
 
-- State
 - Adapter, Facade
 - Command
 - Iterator
