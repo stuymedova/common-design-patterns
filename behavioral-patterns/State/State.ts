@@ -4,6 +4,9 @@
  * Allows an object to alter its behavior when its
  * internal state changes. The object will appear to
  * change its class.
+ *
+ * Below the structure of one possible implementation of
+ * the pattern State.
  */
 
 class Context {
@@ -37,6 +40,7 @@ class ConcreteStateB implements State {
 		// State-specific behaviour
 	}
 }
+
 
 const context = new Context(new ConcreteStateA());
 context.request();

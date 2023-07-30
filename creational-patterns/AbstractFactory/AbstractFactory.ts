@@ -44,12 +44,9 @@ class ProductB2 implements AbstractProductB {}
 
 
 const preferA = true;
-const concreteFactory = (() => {
-	if (preferA) {
-		return new ConcreteFactory1();
-	}
-	return new ConcreteFactory2();
-})();
+const concreteFactory = preferA
+	? new ConcreteFactory1()
+	: new ConcreteFactory2();
 
 concreteFactory.createProductA();
 concreteFactory.createProductB();

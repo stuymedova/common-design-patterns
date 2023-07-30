@@ -81,5 +81,6 @@ class ConcreteObserver implements Observer {
 	}
 }
 
+
 const concreteSubject = new ConcreteSubject();
 const concreteObserver = new ConcreteObserver(concreteSubject);

@@ -71,6 +71,7 @@ class TCPClosed implements TCPState {
 	}
 }
 
+
 const connection = new TCPConnection(new TCPClosed());
 connection.open();
 connection.acknowledge();

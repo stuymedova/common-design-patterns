@@ -6,7 +6,7 @@
  * algorithm vary independently from clients that use it.
  *
  * Below the structure of one possible implementation of
- * the pattern Observer.
+ * the pattern Strategy.
  */
 
 class Context {
