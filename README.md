@@ -34,10 +34,10 @@ Simplest and most common patterns
 <!--
 Interesting patterns
 
+- Proxy
+- Iterator
 - Adapter, Facade
 - Command
-- Iterator
-- Proxy
 - Compound
 -->
 
