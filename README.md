@@ -1,12 +1,13 @@
 # Common Design Patterns
 
-<!-- [6/23] -->
+<!-- [7/23] -->
 
 ### Creational patterns
 
-<!-- [2/5] -->
+<!-- [3/5] -->
 
 - [Abstract Factory (p.87)*](./creational-patterns/AbstractFactory/AbstractFactory.ts)
+- [Factory Method (p.107)](./creational-patterns/FactoryMethod/FactoryMethod.ts)
 - [Singleton (p.127)](./creational-patterns/Singleton/Singleton.ts)
 
 ### Structural patterns
@@ -26,7 +27,6 @@
 <!--
 Simplest and most common patterns
 
-- Factory Method (p.107)
 - Composite (p.163)
 - Template Method (p.325)
 -->
@@ -44,6 +44,10 @@ Interesting patterns
 \* Pages here are references to the book "Design Patterns: Elements of Reusable Object-Oriented Software" by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides. Annotations and schemes within the files are excerpts from the book.
 
 ---
+
+Understanding UML:
+- [UML Class Diagrams: Reference](https://learn.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2015/modeling/uml-class-diagrams-reference)
+- [Introduction to UML and Design Patterns](https://www.ida.liu.se/~chrke55/courses/SWE/intro-uml-designpatterns)
 
 See also:
 - [Common Data Structures](https://github.com/stuymedova/common-data-structures)
