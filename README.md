@@ -1,6 +1,6 @@
 # Common Design Patterns
 
-<!-- [7/23] -->
+<!-- [8/23] -->
 
 ### Creational patterns
 
@@ -12,9 +12,10 @@
 
 ### Structural patterns
 
-<!-- [1/7] -->
+<!-- [2/7] -->
 
 - [Decorator (p.175)](./structural-patterns/Decorator/Decorator.ts)
+- [Proxy (p.207)](./structural-patterns/Proxy/Proxy.ts)
 
 ### Behavioral patterns
 
@@ -34,7 +35,6 @@ Simplest and most common patterns
 <!--
 Interesting patterns
 
-- Proxy
 - Iterator
 - Adapter, Facade
 - Command
