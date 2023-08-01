@@ -5,7 +5,7 @@
  * that when one object changes state, all its dependents
  * are notified and updated automatically.
  *
- * Below the structure of one possible implementation of
+ *  Below is the structure of one possible implementation of
  * the pattern Observer.
  */
 

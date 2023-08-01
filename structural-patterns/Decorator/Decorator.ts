@@ -5,7 +5,7 @@
  * object dynamically by enclosing (wrapping) said object
  * within itself.
  *
- * Below the structure of one possible implementation of
+ *  Below is the structure of one possible implementation of
  * the pattern Decorator.
  */
 

@@ -4,7 +4,7 @@
  * Ensures a class has only one instance and provides a
  * global point of access to it.
  *
- * Below the structure of one possible implementation of
+ *  Below is the structure of one possible implementation of
  * the pattern Singleton.
  */
 

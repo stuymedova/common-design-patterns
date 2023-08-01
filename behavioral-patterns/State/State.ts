@@ -5,7 +5,7 @@
  * internal state changes. The object will appear to
  * change its class.
  *
- * Below the structure of one possible implementation of
+ *  Below is the structure of one possible implementation of
  * the pattern State.
  */
 
