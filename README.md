@@ -1,6 +1,6 @@
 # Common Design Patterns
 
-<!-- [8/23] -->
+<!-- [9/23] -->
 
 ### Creational patterns
 
@@ -12,8 +12,9 @@
 
 ### Structural patterns
 
-<!-- [2/7] -->
+<!-- [3/7] -->
 
+- [Adapter (p.139)](./structural-patterns/Adapter/Adapter.ts)
 - [Decorator (p.175)](./structural-patterns/Decorator/Decorator.ts)
 - [Proxy (p.207)](./structural-patterns/Proxy/Proxy.ts)
 
@@ -35,8 +36,8 @@ Simplest and most common patterns
 <!--
 Interesting patterns
 
+- Facade
 - Iterator
-- Adapter, Facade
 - Command
 - Compound
 -->
