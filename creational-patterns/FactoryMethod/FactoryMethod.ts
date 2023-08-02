@@ -5,8 +5,8 @@
  * subclasses decide which class to instantiate. Factory
  * Method lets a class defer instantiation to subclasses.
  *
- *  Below is the structure of one possible implementation of
- * the pattern Factory Method.
+ * Below is the structure of one possible implementation of
+ * the pattern.
  */
 
 interface Product {

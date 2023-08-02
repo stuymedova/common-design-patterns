@@ -5,8 +5,8 @@
  * or dependent objects without specifying their concrete
  * classes.
  *
- *  Below is the structure of one possible implementation of
- * the pattern Abstract Factory.
+ * Below is the structure of one possible implementation of
+ * the pattern.
  */
 
 interface AbstractFactory {

@@ -4,8 +4,8 @@
  * Ensures a class has only one instance and provides a
  * global point of access to it.
  *
- *  Below is the structure of one possible implementation of
- * the pattern Singleton.
+ * Below is the structure of one possible implementation of
+ * the pattern.
  */
 
 export class Singleton {

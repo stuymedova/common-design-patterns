@@ -5,8 +5,8 @@
  * object dynamically by enclosing (wrapping) said object
  * within itself.
  *
- *  Below is the structure of one possible implementation of
- * the pattern Decorator.
+ * Below is the structure of one possible implementation of
+ * the pattern.
  */
 
 interface Component {

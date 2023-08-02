@@ -5,8 +5,8 @@
  * that when one object changes state, all its dependents
  * are notified and updated automatically.
  *
- *  Below is the structure of one possible implementation of
- * the pattern Observer.
+ * Below is the structure of one possible implementation of
+ * the pattern.
  */
 
 export interface Subject {

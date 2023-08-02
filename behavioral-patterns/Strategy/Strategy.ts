@@ -5,8 +5,8 @@
  * and makes them interchangeable. Strategy lets the
  * algorithm vary independently from clients that use it.
  *
- *  Below is the structure of one possible implementation of
- * the pattern Strategy.
+ * Below is the structure of one possible implementation of
+ * the pattern.
  */
 
 class Context {

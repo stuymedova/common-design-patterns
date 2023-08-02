@@ -5,7 +5,7 @@
  * to control access to it.
  *
  * Below is the structure of one possible implementation
- * of the pattern Proxy.
+ * of the pattern.
  */
 
 interface Subject {
