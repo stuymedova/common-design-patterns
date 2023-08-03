@@ -1,6 +1,7 @@
 abstract class Component {
-	public children: Component[] = [];
 	private parent: Component = null;
+
+	abstract operation(): void;
 
 	setParent(parent: Component) {
         this.parent = parent;
@@ -14,19 +15,17 @@ abstract class Component {
         return this.parent;
     }
 
-	operation() {}
-
 	add(component: Component) {
-		return false;
+		throw new Error('Invalid operation');
 	}
 
 	remove(component: Component) {
-		return false;
+		throw new Error('Invalid operation');
 	}
 
-	getChild(index: number) {
-		return null;
-	}
+	isComposite() {
+        return false;
+    }
 }
 
 class Leaf extends Component {
@@ -57,9 +56,9 @@ class Composite extends Component {
 		return true;
 	}
 
-	getChild(index: number) {
-		return this.children[index];
-	}
+	isComposite() {
+        return true;
+    }
 }
 
 

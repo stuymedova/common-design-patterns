@@ -1,6 +1,7 @@
 abstract class Graphic {
-	public graphics: Graphic[] = [];
 	private parent: Graphic = null;
+
+	abstract operation(): void;
 
 	setParent(parent: Graphic) {
         this.parent = parent;
@@ -14,19 +15,17 @@ abstract class Graphic {
         return this.parent;
     }
 
-	operation() {}
-
-	add(graphic: Graphic) {
-		return false;
+	add(component: Component) {
+		throw new Error('Invalid operation');
 	}
 
-	remove(graphic: Graphic) {
-		return false;
+	remove(component: Component) {
+		throw new Error('Invalid operation');
 	}
 
-	getGraphic(index: number) {
-		return null;
-	}
+	isComposite() {
+        return false;
+    }
 }
 
 class Line extends Graphic {
@@ -63,9 +62,9 @@ class Picture extends Graphic {
 		return true;
 	}
 
-	getGraphic(index: number) {
-		return this.graphics[index];
-	}
+	isComposite() {
+        return true;
+    }
 }
 
 

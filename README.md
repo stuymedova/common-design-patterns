@@ -1,6 +1,6 @@
 # Common Design Patterns
 
-<!-- [9/23] -->
+<!-- [10/23] -->
 
 ### Creational patterns
 
@@ -12,9 +12,10 @@
 
 ### Structural patterns
 
-<!-- [3/7] -->
+<!-- [4/7] -->
 
 - [Adapter (p.139)](./structural-patterns/Adapter/Adapter.ts)
+- [Composite (p.163)](./structural-patterns/Composite/Composite.ts)
 - [Decorator (p.175)](./structural-patterns/Decorator/Decorator.ts)
 - [Proxy (p.207)](./structural-patterns/Proxy/Proxy.ts)
 
@@ -29,7 +30,6 @@
 <!--
 Simplest and most common patterns
 
-- Composite (p.163)
 - Template Method (p.325)
 -->
 
