@@ -1,6 +1,6 @@
 # Common Design Patterns
 
-<!-- [10/23] -->
+<!-- [11/23] -->
 
 ### Creational patterns
 
@@ -21,17 +21,12 @@
 
 ### Behavioral patterns
 
-<!-- [3/11] -->
+<!-- [4/11] -->
 
 - [Observer (p.293)](./behavioral-patterns/Observer/Observer.ts)
 - [State (p.305)](./behavioral-patterns/State/State.ts)
 - [Strategy (p.315)](./behavioral-patterns/Strategy/Strategy.ts)
-
-<!--
-Simplest and most common patterns
-
-- Template Method (p.325)
--->
+- [Template Method (p.325)](./behavioral-patterns/TemplateMethod/TemplateMethod.ts)
 
 <!--
 Interesting patterns
