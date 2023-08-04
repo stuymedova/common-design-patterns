@@ -76,3 +76,7 @@ const connection = new TCPConnection(new TCPClosed());
 connection.open();
 connection.acknowledge();
 connection.close();
+
+// Fixes "Duplicate identifier" TS error by stating that
+// this file is an ES module.
+export {};

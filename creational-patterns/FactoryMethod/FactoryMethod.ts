@@ -52,3 +52,7 @@ const creator = preferCreatorA
 	? new ConcreteCreatorA()
 	: new ConcreteCreatorB();
 creator.anOperation();
+
+// Fixes "Duplicate identifier" TS error by stating that
+// this file is an ES module.
+export {};

@@ -133,3 +133,7 @@ class AnalogClock implements Observer {
 const timer = new ClockTimer();
 const digitalClock = new DigitalClock(timer);
 const analogClock = new AnalogClock(timer);
+
+// Fixes "Duplicate identifier" TS error by stating that
+// this file is an ES module.
+export {};

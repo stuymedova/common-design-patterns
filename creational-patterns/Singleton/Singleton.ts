@@ -20,3 +20,7 @@ export class Singleton {
 }
 
 const singleton = new Singleton();
+
+// Fixes "Duplicate identifier" TS error by stating that
+// this file is an ES module.
+export {};

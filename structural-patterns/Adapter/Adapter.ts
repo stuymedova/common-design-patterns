@@ -57,3 +57,7 @@ const client = new Client();
 client.addTarget(new MyTarget());
 client.addTarget(new Adapter());
 client.makeRequests();
+
+// Fixes "Duplicate identifier" TS error by stating that
+// this file is an ES module.
+export {};

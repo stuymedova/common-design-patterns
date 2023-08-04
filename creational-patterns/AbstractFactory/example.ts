@@ -1,6 +1,6 @@
 interface WidgetFactory {
 	createScrollBar: () => ScrollBar;
-	createWindow: () => CustomWindow;
+	createWindow: () => Window;
 }
 
 class MotifWidgetFactory implements WidgetFactory {
@@ -23,13 +23,13 @@ class PMWidgetFactory implements WidgetFactory {
 }
 
 interface ScrollBar {}
-interface CustomWindow {}
+interface Window {}
 
 class MotifScrollBar implements ScrollBar {}
 class PMScrollBar implements ScrollBar {}
 
-class MotifWindow implements CustomWindow {}
-class PMWindow implements CustomWindow {}
+class MotifWindow implements Window {}
+class PMWindow implements Window {}
 
 
 const preferMotif = true;
@@ -39,3 +39,7 @@ const app = preferMotif
 
 app.createWindow();
 app.createScrollBar();
+
+// Fixes "Duplicate identifier" TS error by stating that
+// this file is an ES module.
+export {};

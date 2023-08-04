@@ -34,3 +34,7 @@ class RealSubjectProxy implements Subject {
 const realSubject = new RealSubject();
 const proxy = new RealSubjectProxy(realSubject);
 proxy.request();
+
+// Fixes "Duplicate identifier" TS error by stating that
+// this file is an ES module.
+export {};

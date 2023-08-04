@@ -67,3 +67,7 @@ const decoratedComponent =
 		new ConcreteDecoratorB(concreteComponent)
 	);
 decoratedComponent.operation();
+
+// Fixes "Duplicate identifier" TS error by stating that
+// this file is an ES module.
+export {};

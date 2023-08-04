@@ -84,3 +84,7 @@ class ConcreteObserver implements Observer {
 
 const concreteSubject = new ConcreteSubject();
 const concreteObserver = new ConcreteObserver(concreteSubject);
+
+// Fixes "Duplicate identifier" TS error by stating that
+// this file is an ES module.
+export {};

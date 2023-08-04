@@ -60,3 +60,7 @@ context.contextInterface();
 
 context.setStrategy(concreteStrategyC);
 context.contextInterface();
+
+// Fixes "Duplicate identifier" TS error by stating that
+// this file is an ES module.
+export {};

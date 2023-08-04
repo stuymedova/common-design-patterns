@@ -56,3 +56,7 @@ const borderedScrollableTextView =
 		new ScrollDecorator(textView)
 	);
 borderedScrollableTextView.draw()
+
+// Fixes "Duplicate identifier" TS error by stating that
+// this file is an ES module.
+export {};

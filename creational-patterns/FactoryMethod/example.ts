@@ -1,12 +1,12 @@
-interface AppDocument {
+interface Document {
 	open: () => void;
 	close: () => void;
 	save: () => void;
 }
 
 abstract class Application {
-	public abstract createDocument(): AppDocument;
-	public documents: AppDocument[];
+	public abstract createDocument(): Document;
+	public documents: Document[];
 
 	newDocument() {
 		const document = this.createDocument();
@@ -27,7 +27,7 @@ class DrawingApplication extends Application {
 	}
 }
 
-class MyDocument implements AppDocument {
+class MyDocument implements Document {
 	open() {
 		// Does something
 	}
@@ -37,7 +37,7 @@ class MyDocument implements AppDocument {
 	save() {}
 }
 
-class DrawingDocument implements AppDocument {
+class DrawingDocument implements Document {
 	open() {
 		// Does something
 	}
@@ -53,3 +53,7 @@ const application = preferMyApplication
 	? new MyApplication()
 	: new DrawingApplication();
 application.newDocument();
+
+// Fixes "Duplicate identifier" TS error by stating that
+// this file is an ES module.
+export {};
