@@ -1,6 +1,6 @@
 # Common Design Patterns
 
-<!-- [11/23] -->
+<!-- [12/23] -->
 
 ### Creational patterns
 
@@ -21,8 +21,9 @@
 
 ### Behavioral patterns
 
-<!-- [4/11] -->
+<!-- [5/11] -->
 
+- [Iterator (p.257)](./behavioral-patterns/Iterator/Iterator.ts)
 - [Observer (p.293)](./behavioral-patterns/Observer/Observer.ts)
 - [State (p.305)](./behavioral-patterns/State/State.ts)
 - [Strategy (p.315)](./behavioral-patterns/Strategy/Strategy.ts)
@@ -32,7 +33,6 @@
 Interesting patterns
 
 - Facade
-- Iterator
 - Command
 - Compound
 -->
