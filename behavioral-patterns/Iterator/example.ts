@@ -31,6 +31,9 @@ class ListIterator implements Iterator<string> {
 	}
 
 	getCurrent() {
+		if (this.isDone()) {
+			throw new Error('Iterator out of bounds.');
+		}
 		return this.list.items[this.current];
 	}
 }
@@ -57,6 +60,9 @@ class ListBackwardsIterator implements Iterator<string> {
 	}
 
 	getCurrent() {
+		if (this.isDone()) {
+			throw new Error('Iterator out of bounds.');
+		}
 		return this.list.items[this.current];
 	}
 }

@@ -42,6 +42,9 @@ class ConcreteIterator implements Iterator<any> {
 	}
 
 	getCurrent() {
+		if (this.isDone()) {
+			throw new Error('Iterator out of bounds.');
+		}
 		return this.list.items[this.current];
 	}
 }
