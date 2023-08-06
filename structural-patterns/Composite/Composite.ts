@@ -1,3 +1,15 @@
+/**
+ * Composite
+ *
+ * Composes objects into tree structures to represent
+ * part-whole hierarchies. Composite lets clients treat
+ * individual objects and compositions of objects
+ * uniformly.
+ *
+ * Below is the structure of one possible implementation of
+ * the pattern.
+ */
+
 abstract class Component {
 	private parent: Component = null;
 
