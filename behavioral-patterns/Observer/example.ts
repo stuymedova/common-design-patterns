@@ -9,9 +9,10 @@
 import { Subject, Observer } from './Observer.ts';
 
 interface ClockState {
-	hour?: number,
-	minute?: number,
-};
+	hours?: number,
+	minutes?: number,
+	seconds?: number,
+}
 
 class ClockTimer implements Subject {
 	private observers: Array<Observer> = [];
@@ -22,20 +23,21 @@ class ClockTimer implements Subject {
 	}
 
 	private tick() {
-		setInterval(() => {
+		const interval = setInterval(() => {
+			clearInterval(interval);
 			this.date = new Date();
 			this.notify();
 			this.tick();
 		}, 1000);
 	}
 
-	public getHour() {
+	public getHours() {
 		return this.date.getHours();
 	}
-	public getMinute() {
+	public getMinutes() {
 		return this.date.getMinutes();
 	}
-	public getSecond() {
+	public getSeconds() {
 		return this.date.getSeconds();
 	}
 
@@ -73,8 +75,9 @@ class DigitalClock implements Observer {
 	}
 
 	public update() {
-		this.state.hour = this.subject?.getHour();
-		this.state.minute = this.subject?.getMinute();
+		this.state.hours = this.subject?.getHours();
+		this.state.minutes = this.subject?.getMinutes();
+		this.state.seconds = this.subject?.getSeconds();
 
 		this.draw();
 	}
@@ -82,7 +85,10 @@ class DigitalClock implements Observer {
 	public draw() {
 		// Defines how to draw the digital clock.
 		// Below is a filler for testing.
-		console.log('Digital Clock', this.state.hour, this.state.minute);
+		console.log(
+			'Digital Clock',
+			`${this.state.hours}:${this.state.minutes}:${this.state.seconds}`,
+		);
 	}
 
 	public destruct() {
@@ -108,8 +114,9 @@ class AnalogClock implements Observer {
 	}
 
 	public update() {
-		this.state.hour = this.subject?.getHour();
-		this.state.minute = this.subject?.getMinute();
+		this.state.hours = this.subject?.getHours();
+		this.state.minutes = this.subject?.getMinutes();
+		this.state.seconds = this.subject?.getSeconds();
 
 		this.draw();
 	}
@@ -117,7 +124,10 @@ class AnalogClock implements Observer {
 	public draw() {
 		// Defines how to draw the analog clock.
 		// Below is a filler for testing.
-		console.log('Analog Clock', this.state.hour, this.state.minute);
+		console.log(
+			'Analog Clock',
+			`${this.state.hours}:${this.state.minutes}:${this.state.seconds}`,
+		);
 	}
 
 	public destruct() {
@@ -133,6 +143,13 @@ class AnalogClock implements Observer {
 const timer = new ClockTimer();
 const digitalClock = new DigitalClock(timer);
 const analogClock = new AnalogClock(timer);
+
+setTimeout(() => {
+	digitalClock.destruct();
+	analogClock.destruct();
+	console.log('---------------------------')
+	console.log('Destructed the clocks after 5 seconds.');
+}, 5000);
 
 // Fixes "Duplicate identifier" TS error by stating that
 // this file is an ES module.

@@ -59,7 +59,7 @@ class ConcreteSubject implements Subject {
 
 class ConcreteObserver implements Observer {
 	private state: Record<string, any> = {};
-	private subject: Subject = null;
+	private subject: Subject | null = null;
 
 	constructor(subject: Subject) {
 		this.subject = subject;
@@ -84,6 +84,10 @@ class ConcreteObserver implements Observer {
 
 const concreteSubject = new ConcreteSubject();
 const concreteObserver = new ConcreteObserver(concreteSubject);
+
+setTimeout(() => {
+	concreteObserver.destruct();
+}, 5000);
 
 // Fixes "Duplicate identifier" TS error by stating that
 // this file is an ES module.
