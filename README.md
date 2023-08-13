@@ -1,6 +1,6 @@
 # Common Design Patterns
 
-<!-- [13/23] -->
+<!-- [14/23] -->
 
 ### Creational patterns
 
@@ -22,8 +22,9 @@
 
 ### Behavioral patterns
 
-<!-- [5/11] -->
+<!-- [6/11] -->
 
+- [Command (p.233)](./behavioral-patterns/Command/Command.ts)
 - [Iterator (p.257)](./behavioral-patterns/Iterator/Iterator.ts)
 - [Observer (p.293)](./behavioral-patterns/Observer/Observer.ts)
 - [State (p.305)](./behavioral-patterns/State/State.ts)
@@ -33,7 +34,6 @@
 <!--
 Interesting patterns
 
-- Command
 - Prototype
 - Memento
 - Visitor
@@ -41,7 +41,7 @@ Interesting patterns
 - Compound
 -->
 
-\* Pages here are references to the book "Design Patterns: Elements of Reusable Object-Oriented Software" by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides. Annotations and schemes within the files are excerpts from the book.
+\* Pages here are references to the book "Design Patterns: Elements of Reusable Object-Oriented Software" by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides. Annotations within the files are excerpts from the book.
 
 ---
 
