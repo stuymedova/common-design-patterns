@@ -1,13 +1,14 @@
 # Common Design Patterns
 
-<!-- [14/23] -->
+<!-- [15/23] -->
 
 ### Creational patterns
 
-<!-- [3/5] -->
+<!-- [4/5] -->
 
 - [Abstract Factory (p.87)*](./creational-patterns/AbstractFactory/AbstractFactory.ts)
 - [Factory Method (p.107)](./creational-patterns/FactoryMethod/FactoryMethod.ts)
+- [Prototype (p.117)](./creational-patterns/Prototype/Prototype.ts)
 - [Singleton (p.127)](./creational-patterns/Singleton/Singleton.ts)
 
 ### Structural patterns
@@ -34,7 +35,6 @@
 <!--
 Interesting patterns
 
-- Prototype
 - Memento
 - Visitor
 - Facade
