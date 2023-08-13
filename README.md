@@ -1,6 +1,6 @@
 # Common Design Patterns
 
-<!-- [12/23] -->
+<!-- [13/23] -->
 
 ### Creational patterns
 
@@ -12,8 +12,9 @@
 
 ### Structural patterns
 
-<!-- [4/7] -->
+<!-- [5/7] -->
 
+- [Bridge (p.151)](./structural-patterns/Bridge/Bridge.ts)
 - [Adapter (p.139)](./structural-patterns/Adapter/Adapter.ts)
 - [Composite (p.163)](./structural-patterns/Composite/Composite.ts)
 - [Decorator (p.175)](./structural-patterns/Decorator/Decorator.ts)
@@ -32,8 +33,11 @@
 <!--
 Interesting patterns
 
-- Facade
 - Command
+- Prototype
+- Memento
+- Visitor
+- Facade
 - Compound
 -->
 
